@@ -50,8 +50,9 @@ class MyHandler implements HttpHandler {
 			resHeader.set("Content-Type", "text/plain");			
 			
 			String inStr = sc.nextLine();
-			String result = tokenizer.segment(inStr);
+			String result = toJSON(tokenizer.segment(inStr));
 			System.out.println(inStr);
+			System.out.println(result);
 			
 			exchange.sendResponseHeaders(200, result.getBytes().length);
 			OutputStream resBody = exchange.getResponseBody();
@@ -61,6 +62,21 @@ class MyHandler implements HttpHandler {
 			
 			sc.close();
 		}
+	}
+
+	private String toJSON(String res){
+		StringBuilder json = new StringBuilder("{\"words\":[");
+		String[] list = res.split(" +");
+		System.out.println(list);
+		for (int i=0; i<list.length-1; i++) {
+			System.out.println(list[i]);
+			json.append("\"" + list[i].replaceAll("_", " ") + "\",");
+		}
+		if (list.length>0) {
+			json.append("\"" + list[list.length - 1].replaceAll("_", " ") + "\"");
+		}
+		json = json.append("]}");
+		return json.toString();
 	}
 	
 }
