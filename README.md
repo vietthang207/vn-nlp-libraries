@@ -16,7 +16,7 @@
 
 - [Get user profile](#get-user-profile)
 - [Get user’s bookmarks](#get-user's-bookmarks)
-- [Create new bookmark](#greate-new-bookmark)
+- [Create new bookmark](#create-new-bookmark)
 - [Get locations by location id](#get-locations-by-location-id)
 
 # **Get all categories**
