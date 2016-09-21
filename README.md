@@ -1,4 +1,4 @@
-## PicMatch!
+## AMap
 #### This is group project done for CS3216 by:
 - Zhu Liang (A0093910H): Front-end Developer.
 - Heng Rui Yan Ryan (A0108233R): Front-end Developer.
@@ -313,37 +313,37 @@
     ```
 
 # **Get locations by location id**
-    ----
+----
 
-    * **URL**
+* **URL**
 
-      `GET`  /api/location
+  `GET`  /api/location
 
-    *  **URL Params**
+*  **URL Params**
 
-       **Required:**
+   **Required:**
 
-       **Optional:**
+   **Optional:**
 
-    * **Query string**
+* **Query string**
 
-        **Required:**
+    **Required:**
 
-        `id=[integer]`
+    `id=[integer]`
 
-    * **Success Response:**
+* **Success Response:**
 
-      * **Code:** 200 <br />
+  * **Code:** 200 <br />
 
-        **Content:**
-        ```json
-        {
-            "id": int,
-            "name": string,
-            "catid": int,
-            "position": {
-                "lat": float,
-                "lng": float
-            }
+    **Content:**
+    ```json
+    {
+        "id": int,
+        "name": string,
+        "catid": int,
+        "position": {
+            "lat": float,
+            "lng": float
         }
-        ```
+    }
+    ```
