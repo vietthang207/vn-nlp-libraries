@@ -7,17 +7,17 @@
 
 #### Public API
 
-- [Get all categories](#Get-locations-by-category)
-- [Get locations by category](#Get-locations-by-category)
-- [Facebook authentication](#Get-locations-by-category)
-- [Facebook authentication callback](#Get-locations-by-category)
+- [Get all categories](#get-locations-by-category)
+- [Get locations by category](#get-locations-by-category)
+- [Facebook authentication](#get-locations-by-category)
+- [Facebook authentication callback](#get-locations-by-category)
 
 #### API
 
-- [Get user profile](#Get-user-profile)
-- [Get user’s bookmarks](#Get-user's-bookmarks)
-- [Create new bookmark](#Create-new-bookmark)
-- [Get locations by location id](#Get-locations-by-location-id)
+- [Get user profile](#get-user-profile)
+- [Get user’s bookmarks](#get-user's-bookmarks)
+- [Create new bookmark](#greate-new-bookmark)
+- [Get locations by location id](#get-locations-by-location-id)
 
 # **Get all categories**
 ----
