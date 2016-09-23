@@ -21,16 +21,16 @@
 
 #### Public API
 
-- [Get all categories](#get-locations-by-category)
+- [Get all categories](#get-all-categories)
 - [Get locations by category](#get-locations-by-category)
-- [Facebook authentication](#get-locations-by-category)
-- [Facebook authentication callback](#get-locations-by-category)
+- [Facebook authentication](#facebook-authentication)
+- [Facebook authentication callback](#facebook-authentication-callback)
 
 #### API
 
 - [Logout](#logout)
 - [Get user profile](#get-user-profile)
-- [Get user’s bookmarks](#get-user's-bookmarks)
+- [Get user’s bookmarks](#get-users-bookmarks)
 - [Create new bookmark](#create-new-bookmark)
 - [Delete bookmark](#delete-bookmark)
 - [Get locations by location id](#get-locations-by-location-id)
