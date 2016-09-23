@@ -34,6 +34,9 @@
 - [Create new bookmark](#create-new-bookmark)
 - [Delete bookmark](#delete-bookmark)
 - [Get locations by location id](#get-locations-by-location-id)
+- [Add new locations to the map](#add-new-locations-to-the-map)
+- [Update existing location](#update-existing-location)
+- [Delete location](#delete-location)
 
 # **Get all categories**
 ----
