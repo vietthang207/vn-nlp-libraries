@@ -388,6 +388,7 @@
 
     curl -XDELETE localhost:3000/api/bookmark/32
 
+
 # **Get locations by location id**
 ----
 
@@ -421,5 +422,163 @@
             "lat": float,
             "lng": float
         }
+    }
+    ```
+
+# **Add new locations to the map**
+----
+
+* **URL**
+
+  `POST`  /api/location
+
+*  **Data Params**
+
+    ```json
+    [
+        {
+            "name": string,
+            "catid": int,
+            "lat": float,
+            "lng": float
+        },
+        ...
+    ]
+    ```
+
+* **Query string**
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+
+    **Content:**
+    ```json
+    {
+        "id": int,
+        "name": string,
+        "catid": int,
+        "position": {
+            "lat": float,
+            "lng": float
+        },
+        "imageUrl": string
+    }
+    ```
+* **Error Response:**
+
+    *   **Code:** 400 <br />
+
+        **Content:**
+
+* **Sample Call:**
+
+    curl -XPOST localhost:3000/api/location -d
+    ```json
+    [{
+        "name": "test 1",
+        "lat": 1.29493,
+        "lng": 103.77254,
+        "catid": 34
+    },
+    {
+        "name": "test 2",
+        "lat": 1.29487,
+        "lng": 103.77256,
+        "catid": 34
+    },
+    {
+        "name": "test 3",
+        "lat": 1.29487,
+        "lng": 103.77375,
+        "catid": 32
+    }]
+    ```
+
+# **Update existing location**
+----
+
+* **URL**
+
+  `PUT`  /api/location
+
+*  **Data Params**
+
+    ```json
+    [
+        {
+            "id": int,
+            "name": string,
+            "catid": int,
+            "lat": float,
+            "lng": float
+        },
+        ...
+    ]
+    ```
+
+* **Query string**
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+
+    **Content:**
+
+
+* **Error Response:**
+
+  * **Code:** 400 <br />
+
+    **Content:** `Error`
+
+* **Sample Call:**
+
+    curl -XPUT localhost:3000/api/location -d
+    ```json
+    {
+        "name": "test 1",
+        "lat": 1.29493,
+        "lng": 103.77254,
+        "catid": 34
+    }
+    ```
+
+# **Delete location**
+----
+
+* **URL**
+
+  `DELETE`  /api/location
+
+*  **Data Params**
+
+    ```json
+        {
+            "id": int
+        }
+    ```
+
+* **Query string**
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+
+    **Content:** ``
+
+
+* **Error Response:**
+
+  * **Code:** 400 <br />
+
+    **Content:** `Error`
+
+* **Sample Call:**
+
+    curl -XDELETE localhost:3000/api/location -d
+    ```json
+    {
+        "name": "test 1"
     }
     ```
