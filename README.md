@@ -1,9 +1,23 @@
-## AMap
-#### This is group project done for CS3216 by:
-- Zhu Liang (A0093910H): Front-end Developer.
-- Heng Rui Yan Ryan (A0108233R): Front-end Developer.
-- Varun Patro (A0): Back-end Developer.
-- Dinh Viet Thang (A0126513N): Back-end Developer.
+# AMap
+## CS3216 Assignment 3 Project
+
+
+### Zhu Liang (A0093910H)
+- Front-end Development (Google Maps Integration, APIs)
+- Admin
+
+### Heng Rui Yan Ryan (A0108233R)
+- Front-end Development (Ionic Framework, Ionic UI)
+- Floormap Image Creation
+
+### Varun Patro (A0131729E)
+- Back-end Development
+- Google Maps Overlay Tiles Generation
+- Database
+
+## Dinh Viet Thang (A0126513N)
+- Back-end Development
+- Database
 
 #### Public API
 
@@ -14,9 +28,11 @@
 
 #### API
 
+- [Logout](#logout)
 - [Get user profile](#get-user-profile)
 - [Get user’s bookmarks](#get-user's-bookmarks)
 - [Create new bookmark](#create-new-bookmark)
+- [Delete bookmark](#delete-bookmark)
 - [Get locations by location id](#get-locations-by-location-id)
 
 # **Get all categories**
@@ -167,6 +183,31 @@
 
 * **Sample Call:**
 
+# **Logout**
+----
+
+* **URL**
+
+  `GET`  /auth/logout
+
+*  **URL Params**
+
+* **Data Params**
+
+* **Success Response:**
+
+  * **Code:** 302 <br />
+
+    **Content:** `logout success and redirect to homepage`
+
+* **Error Response:**
+
+  * **Code:** 400 <br />
+
+    **Content:** `error`
+
+* **Sample Call:**
+
 # **Get user profile**
 ----
 
@@ -311,6 +352,41 @@
         "note": "cs3216 lecture room"
     }
     ```
+
+# **Delete bookmark**
+----
+
+* **URL**
+
+  `DELETE`  /api/bookmark/:id
+
+*  **URL Params**
+
+    **Required:**
+
+    `id=[integer]`
+
+* **Data Params**
+
+* **Success Response:**
+
+    * **Code:** 200 <br />
+
+    **Content:** `Number of bookmark affected (which is always 1)`
+
+* **Error Response:**
+
+    *   **Code:** 400 <br />
+
+        **Content:** `Bookmark does not exist or not belong to the user`
+
+    *   **Code:** 401 <br />
+
+        **Content:** `auth error`
+
+* **Sample Call:**
+
+    curl -XDELETE localhost:3000/api/bookmark/32
 
 # **Get locations by location id**
 ----
